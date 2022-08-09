@@ -7,16 +7,85 @@ URL:https://kanekont.github.io　1−12の予定カレンダー
  </head>
   <body>
    
-   <p id="tabcontrol">
-    <a href="#tabpage1">タブ1</a>
-    <a href="#tabpage2">タブ2</a>
-    <a href="#tabpage3">タブ3</a>
-   </p>
+   #<p id="tabcontrol">
+    #<a href="#tabpage1">タブ1</a>
+    #<a href="#tabpage2">タブ2</a>
+    #<a href="#tabpage3">タブ3</a>
+   #</p>
    
-   <div id="tabbody">
-    <div id="tabpage1">…… <form> <input type="password" value="" name="sample" maxlength="10" required> </form> ……</div>
-    <div id="tabpage2">…… <p><iframe src="https://calendar.google.com/calendar/embed?src=c_pkdpfbqra775vsaue48r6uotvs%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></p> ……</div>
-   </div>
+   #<div id="tabbody">
+    #<div id="tabpage1">…… <form> <input type="password" value="" name="sample" maxlength="10" required> </form> ……</div>
+    #<div id="tabpage2">…… <p><iframe src="https://calendar.google.com/calendar/embed?src=c_pkdpfbqra775vsaue48r6uotvs%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></p> ……</div>
+   #</div>
+   
+   <div class="tabs">
+  <input type="radio" name="tab_name" id="tab1" checked>
+  <label class="tab_class" for="tab1">タブ1</label>
+  <div class="content_class">
+    <p>タブ1のコンテンツを表示します</p>
+  </div>
+  <input type="radio" name="tab_name" id="tab2" >
+  <label class="tab_class" for="tab2">タブ2</label>
+  <div class="content_class">
+    <p>タブ2のコンテンツを表示します</p>
+  </div>
+  <input type="radio" name="tab_name" id="tab3" >
+  <label class="tab_class" for="tab3">タブ3</label>
+  <div class="content_class">
+    <p>タブ3のコンテンツを表示します</p>
+  </div>
+  <input type="radio" name="tab_name" id="tab4" >
+  <label class="tab_class" for="tab4">タブ4</label>
+  <div class="content_class">
+    <p>タブ4のコンテンツを表示します</p>
+  </div>
+  <input type="radio" name="tab_name" id="tab5" >
+  <label class="tab_class" for="tab5">タブ5</label>
+  <div class="content_class">
+    <p>タブ5のコンテンツを表示します</p>
+  </div>
+</div>
+/* CSSコード */
+.tabs {
+  width: 500px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+ 
+.tab_class {
+  width: calc(100%/5);
+  height: 50px;
+  background-color: #eee;
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+ 
+input[name="tab_name"] {
+  display: none;
+}
+ 
+input:checked + .tab_class {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+ 
+.content_class {
+  display: none;
+  width: 100%;
+  border-bottom: 3px solid #eee;
+  border-right: 3px solid #eee;
+  border-left: 3px solid #eee;
+  padding: 30px 10px;
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+}
    
   </body>
 </html>
