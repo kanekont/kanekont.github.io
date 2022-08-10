@@ -10,6 +10,21 @@ URL:https://kanekont.github.io　　1−12の予定カレンダー　どの端�
    
    <open>('not_exist_dir/menbers', 'w')
    
+   <import> os
+   os.makedirs(new_dir_path, exist_ok=True)
+   
+   <if> not os.path.exists(new_dir_path):
+   os.makedirs(new_dir_path)
+   
+   import os
+
+   def save_file_at_dir(dir_path, filename, file_content, mode='w'):
+    os.makedirs(dir_path, exist_ok=True)
+    with open(os.path.join(dir_path, filename), mode) as f:
+        f.write(file_content)
+   
+   save_file_at_dir('new_dir/sub_dir', 'new_file.txt', 'new text')
+   
    <p>＝＝＊＊＊ルール＊＊＊＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<p>
    <p>ーーー＜＜禁止事項＞＞ーーーーーーーーーーーーーーーーーー<p>
    <p>・個人情報や個人の特定に繋がる記載:このサイトは現段階では誰でも、どの端末からでもアクセスが出来てしまう状態です。後にパスワードを導入しようと考えています。<p>
