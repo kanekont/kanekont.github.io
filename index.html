@@ -16,14 +16,14 @@ URL:https://kanekont.github.io　　1−12の予定カレンダー　どの端�
    <if> not os.path.exists(new_dir_path):
    os.makedirs(new_dir_path)
    
-   import os
+   <import> os
 
-   def save_file_at_dir(dir_path, filename, file_content, mode='w'):
+   <def> save_file_at_dir(dir_path, filename, file_content, mode='w'):
     os.makedirs(dir_path, exist_ok=True)
     with open(os.path.join(dir_path, filename), mode) as f:
         f.write(file_content)
    
-   save_file_at_dir('new_dir/sub_dir', 'new_file.txt', 'new text')
+   <save_file_at_dir>('new_dir/sub_dir', 'new_file.txt', 'new text')
    
    <p>＝＝＊＊＊ルール＊＊＊＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<p>
    <p>ーーー＜＜禁止事項＞＞ーーーーーーーーーーーーーーーーーー<p>
