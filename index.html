@@ -1,1 +1,2398 @@
 
+/* Import
+   ============================================ */
+
+/* WebFont */
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap");
+
+/* ResetCSS */
+
+@import url("./reset.css");
+
+/* 繝倥ャ繝繝ｼ */
+
+@import url("./header.css");
+
+/* 繝輔ャ繧ｿ繝ｼ */
+
+@import url("./footer.css");
+
+/* 繝｢繝舌う繝ｫ譎ゅ�繝｡繧ｬ繝｡繝九Η繝ｼ */
+
+@import url("./mega-menu.css");
+
+
+/* Responsive
+   ============================================ */
+
+/* PC縺ｨ繧ｿ繝悶Ξ繝�ヨ縺ｮ縺ｿ陦ｨ遉ｺ */
+.pc-tb {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+body {
+  position: relative;
+}
+
+/* Component
+   ============================================ */
+
+/* 繝医ャ繝励�繝ｼ繧ｸ蜈ｱ騾夊ｦ句�縺�
+   ------------------------ */
+
+h1.top {
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+h1.top>span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+h1.top>span.subtitle {
+  font-size: 0.6em;
+  font-weight: bold;
+}
+
+/* 豕穂ｺｺ */
+
+h1.top>span.corporation {
+  color: #626aa4;
+}
+
+h2.top {
+  font-size: 20px;
+}
+
+/* 荳ｭ蟄ｦ譬｡ */
+
+h1.top>span.middle-school {
+  color: #3ab0cb;
+}
+
+/* 鬮倡ｭ牙ｭｦ譬｡ */
+
+h1.top>span.high-school {
+  color: #ef6346;
+}
+
+/* 荳ｭ繝壹�繧ｸ蜈ｱ騾夊ｦ句�縺�
+   ------------------------ */
+
+h1.child {
+  font-size: 42px;
+  font-weight: normal;
+  padding: 30px 0;
+  line-height: 1.3;
+  border-bottom: 1px solid #dedede;
+}
+
+h2.child {
+  position: relative;
+  padding-left: 20px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+h2.child::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  display: block;
+  width: 3px;
+  height: 27px;
+  background: #000;
+}
+
+h2.child time {
+  display: block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #808080;
+  font-weight: normal;
+}
+
+h3.child {
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+h4.child {
+  font-size: 18px;
+}
+
+h5.child {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* 豕穂ｺｺ */
+
+h2.child.corporation {
+  color: #626aa4;
+}
+
+h2.child.corporation::before {
+  background: #626aa4;
+}
+
+h3.child.corporation {
+  color: #626aa4;
+}
+
+/* 荳ｭ蟄ｦ */
+
+h2.child.middle-school {
+  color: #48a8d9;
+}
+
+h2.child.middle-school::before {
+  background: #48a8d9;
+}
+
+h3.child.middle-school {
+  color: #48a8d9;
+}
+
+/* 鬮俶�｡ */
+
+h2.child.high-school {
+  color: #ef6346;
+}
+
+h2.child.high-school::before {
+  background: #ef6346;
+}
+
+h3.child.high-school {
+  color: #ef6346;
+}
+
+/* 繧ｿ繧ｰ
+   ------------------------ */
+
+.c-tag {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  padding: 1px 4px 2px;
+  font-size: 10px;
+  border: 1px solid #fff;
+}
+
+.c-tag[class] {
+  border-color: inherit;
+  margin-left: 5px;
+}
+
+/* 荳ｭ鬮伜�騾� */
+
+.c-tag.common {
+  color: #626aa4;
+  border: 1px solid #626aa4;
+}
+
+/* 縺顔衍繧峨○縺ｮ繧ｸ繝｣繝ｳ繝ｫ繧ｿ繧ｰ */
+
+.c-tag.genre {
+  top: 0;
+  width: 80px;
+  padding: 2px 0;
+  color: #b1b6be;
+  border: 1px solid #b1b6be;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+/* PDF繧ｿ繧ｰ */
+
+.c-tag.pdf {
+  color: #f11717;
+  border: 1px solid #f11717;
+}
+
+/* 繝懊ち繝ｳ
+   ------------------------ */
+
+.c-btn {
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.c-btn.is-not-active {
+  background: none !important;
+  background-color: #c2c2c2 !important;
+  pointer-events: none !important;
+}
+
+.c-btn.base {
+  min-width: 250px;
+  padding: 11px 35px;
+  text-align: center;
+  border: none;
+}
+
+.c-btn.base:hover {
+  opacity: 0.7;
+}
+
+.c-btn.base.outline {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.c-btn.base.outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.c-btn.base.outline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  z-index: -2;
+}
+
+.c-btn.base.outline:hover {
+  opacity: 1;
+}
+
+.c-btn.base.outline:hover::before {
+  opacity: 0;
+}
+
+/* 豕穂ｺｺ縺ｮ蝓ｺ譛ｬ繝懊ち繝ｳ */
+
+.c-btn.base.corporation {
+  color: #fff;
+  background: linear-gradient(90deg, #6169a3 0%, #5fa3d3 100%);
+}
+
+.c-btn.base.corporation.outline {
+  color: #6169a3;
+}
+
+.c-btn.base.corporation.outline:hover {
+  color: #fff;
+}
+
+.c-btn.base.corporation.outline::before {
+  border: 1px solid #6169a3;
+  background: #fff;
+}
+
+.c-btn.base.corporation.outline::after {
+  background: linear-gradient(90deg, #6169a3 0%, #5fa3d3 100%);
+}
+
+/* 荳ｭ蟄ｦ縺ｮ蝓ｺ譛ｬ繝懊ち繝ｳ */
+
+.c-btn.base.middle-school {
+  color: #fff;
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+.c-btn.base.middle-school.outline:hover {
+  color: #fff;
+}
+
+.c-btn.base.middle-school.outline::before {
+  border: 1px solid #3595cd;
+  background: #fff;
+}
+
+.c-btn.base.middle-school.outline::after {
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+/* 鬮俶�｡縺ｮ蝓ｺ譛ｬ繝懊ち繝ｳ */
+
+.c-btn.base.high-school {
+  color: #fff;
+  background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+}
+
+.c-btn.base.high-school.outline {
+  color: #ef6346;
+}
+
+.c-btn.base.high-school.outline:hover {
+  color: #fff;
+}
+
+.c-btn.base.high-school.outline::before {
+  border: 1px solid #ef6346;
+  background: #fff;
+}
+
+.c-btn.base.high-school.outline::after {
+  background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+}
+
+/* 迚ｹ騾ｲ驕ｸ謚懊さ繝ｼ繧ｹ Ex�医お繧ｯ繧ｻ繝ｬ繝ｳ繝茨ｼ峨け繝ｩ繧ｹ�域立 繧｢繝峨ヰ繝ｳ繧ｹ繝磯∈謚懊け繝ｩ繧ｹ�� */
+
+.c-btn.base.advanced {
+  color: #fff;
+  background: linear-gradient(90deg, #15995f 0%, #8ccf68 100%);
+}
+
+/* 迚ｹ騾ｲ驕ｸ謚懊さ繝ｼ繧ｹ�域立 迚ｹ騾ｲ驕ｸ謚慚ｱ繧ｳ繝ｼ繧ｹ�� */
+
+.c-btn.base.special-a {
+  color: #fff;
+  background: linear-gradient(90deg, #3a6ebc 0%, #6da6d6 100%);
+}
+
+/* 騾ｲ蟄ｦ驕ｸ謚懊さ繝ｼ繧ｹ 繝励Ο繧ｰ繝ｬ繧ｹ�域立 迚ｹ騾ｲﾎｲ繧ｳ繝ｼ繧ｹ ﾎｲ7�� */
+
+.c-btn.base.progress {
+  color: #fff;
+  background: linear-gradient(90deg, #e73f37 0%, #ed768d 100%);
+}
+
+/* 騾ｲ蟄ｦ驕ｸ謚懊さ繝ｼ繧ｹ 繝輔Ο繝ｳ繝�ぅ繧｢�域立 迚ｹ騾ｲﾎｲ繧ｳ繝ｼ繧ｹ ﾎｲ6�� */
+
+.c-btn.base.frontier {
+  color: #fff;
+  background: linear-gradient(90deg, #d88e00 0%, #d5bb49 100%);
+}
+
+/* 繧､繝ｳ繝輔か繝｡繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ繧ｿ繝夜Κ蛻� */
+
+.c-btn.info-tab {
+  position: relative;
+  /* width: 150px; */
+  padding: 7px 0;
+  text-align: center;
+  z-index: 0;
+  flex-grow: 1;
+  padding: 7px 1em;
+}
+
+.tab-btn-area .c-btn.info-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #d8d9db;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.tab-btn-area .c-btn.info-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  z-index: -2;
+}
+
+.c-btn.info-tab:hover::before,
+.tab-btn-area input[type="radio"]:checked+.c-btn.info-tab::before {
+  opacity: 0;
+}
+
+/* 豕穂ｺｺ */
+
+.information-area.corporation .tab-btn-area .c-btn.info-tab::after {
+  background: linear-gradient(90deg, #6169a3 0%, #5fa3d3 100%);
+}
+
+.information-area.corporation .tab-btn-area .c-btn.info-tab:hover,
+.information-area.corporation .tab-btn-area input[type="radio"]:checked+.c-btn.info-tab {
+  color: #fff;
+  background: linear-gradient(90deg, #6169a3 0%, #5fa3d3 100%);
+}
+
+.information-area.corporation .article-area li:hover p {
+  color: #626aa4;
+}
+
+/* 荳ｭ蟄ｦ */
+
+.tab-btn-area.middle-school .c-btn.info-tab::after {
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+.tab-btn-area.middle-school .c-btn.info-tab:hover,
+.tab-btn-area.middle-school input[type="radio"]:checked+.c-btn.info-tab {
+  color: #fff;
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+.information-area.middle-school .article-area li:hover p {
+  color: #3595cd;
+}
+
+/* 鬮俶�｡ */
+
+.tab-btn-area.high-school .c-btn.info-tab::after {
+  background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+}
+
+.tab-btn-area.high-school .c-btn.info-tab:hover,
+.tab-btn-area.high-school input[type="radio"]:checked+.c-btn.info-tab {
+  color: #fff;
+  background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+}
+
+.information-area.high-school .article-area li:hover p {
+  color: #ef6346;
+}
+
+/* 繝ｪ繧ｹ繝�
+   ------------------------ */
+
+.c-list.disc li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.c-list.disc li::before {
+  content: "";
+  position: relative;
+  top: -3px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.c-list.disc li+li {
+  margin-top: 10px;
+}
+
+/* 繝ｩ繧ｸ繧ｪ繝懊ち繝ｳ
+   ------------------------ */
+
+.c-radio-btn {
+  position: relative;
+  padding-left: 35px;
+}
+
+.c-radio-btn::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.c-radio-btn::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked+.c-radio-btn::after {
+  width: 10px;
+  height: 10px;
+  transition: 0.15s;
+}
+
+/* 豕穂ｺｺ */
+
+input[type="radio"]:checked+.c-radio-btn.corporation::after {
+  background-color: #626aa4;
+}
+
+/* 荳ｭ蟄ｦ */
+
+input[type="radio"]:checked+.c-radio-btn.middle-school::after {
+  background-color: #3595cd;
+}
+
+/* 鬮俶�｡ */
+
+input[type="radio"]:checked+.c-radio-btn.high-school::after {
+  background-color: #ef6346;
+}
+
+/* 逕ｻ蜒州OX
+   ------------------------ */
+
+.img-box.child {
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.img-box p {
+  margin-top: 10px;
+}
+
+.img-box.la {
+  display: inline-block;
+  max-width: 620px;
+  width: 48%;
+  margin-bottom: 35px;
+}
+.img-box.la img {
+  width: 100%;
+}
+
+.img-box.md {
+  display: inline-block;
+  max-width: 480px;
+}
+
+.img-box.sm {
+  display: inline-block;
+  max-width: 310px;
+}
+
+/* topic content box
+   ------------------------ */
+
+.topic-content-box {
+  padding: 30px 40px;
+  background: #f7f7f7;
+}
+
+.topic-content-box .title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+/* 豕穂ｺｺ */
+
+.topic-content-box.corporation .title {
+  color: #626aa4;
+}
+
+/* 荳ｭ蟄ｦ */
+
+.topic-content-box.middle-school .title {
+  color: #48a8d9;
+}
+
+/* 鬮俶�｡ */
+
+.topic-content-box.high-school .title {
+  color: #ef6346;
+}
+
+/* 繝代Φ縺上★繝ｪ繧ｹ繝�
+   ------------------------ */
+
+.bread-crumb-area {
+  padding: 7px 0 10px;
+  border-top: 1px solid #dedede;
+}
+
+.bread-crumb li {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.bread-crumb li+li {
+  margin-left: 30px;
+}
+
+.bread-crumb li+li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transform: rotate(-45deg);
+}
+
+.bread-crumb li a {
+  transition: 0.2s;
+}
+
+.bread-crumb li a:hover {
+  opacity: 0.7;
+}
+
+/* 豕穂ｺｺ */
+
+.bread-crumb.corporation li a {
+  color: #777eb0;
+}
+
+/* 荳ｭ蟄ｦ */
+
+.bread-crumb.middle-school li a {
+  color: #48a8d9;
+}
+
+/* 鬮俶�｡ */
+
+.bread-crumb.high-school li a {
+  color: #ef6346;
+}
+
+/* 繝壹�繧ｸ騾√ｊ
+   ------------------------ */
+
+.paging-area {
+  text-align: center;
+}
+
+.paging {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.paging li {
+  display: inline-block;
+}
+
+.paging li+li {
+  margin-left: 5px;
+}
+
+.paging-btn {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: #f3f4f4;
+  border: 1px solid #d6d6d6;
+  transition: 0.2s;
+}
+
+.paging-btn.prev {
+  position: relative;
+  margin-right: 20px;
+  padding-left: 35px;
+}
+
+.paging-btn.prev::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.paging-btn.next {
+  position: relative;
+  margin-left: 20px;
+  padding-right: 35px;
+}
+
+.paging-btn.next::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.paging .paging-btn.prev:hover::before,
+.paging .paging-btn.next:hover::after {
+  border-color: #fff;
+}
+
+.paging[class] .paging-btn.is-active,
+.paging[class] .paging-btn:hover {
+  color: #fff;
+}
+
+/* 豕穂ｺｺ */
+
+.paging.corporation .paging-btn.is-active,
+.paging.corporation .paging-btn:hover {
+  background: #626aa4;
+}
+
+/* 荳ｭ蟄ｦ */
+
+.paging.middle-school .paging-btn.is-active,
+.paging.middle-school .paging-btn:hover {
+  background: #48a8d9;
+}
+
+/* 鬮俶�｡ */
+
+.paging.high-school .paging-btn.is-active,
+.paging.high-school .paging-btn:hover {
+  background: #ef6345;
+}
+
+/* FAQ繧｢繧ｳ繝ｼ繝�ぅ繧ｪ繝ｳ
+   ------------------------ */
+
+ol.faq {
+  counter-reset: question-number;
+}
+
+ol.faq li {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #dedede;
+}
+
+ol.faq label {
+  display: block;
+  padding: 20px 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+ol.faq li label::before {
+  counter-increment: question-number;
+  content: counter(question-number) ".";
+  position: absolute;
+  width: 28px;
+  text-align: right;
+}
+
+ol.faq .question {
+  position: relative;
+  margin-left: 35px;
+  padding-right: 45px;
+}
+
+ol.faq .question::before,
+ol.faq .question::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 9px);
+  transform: translate(-50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  transition: 0.2s;
+}
+
+ol.faq .question::before {
+  border-top: 2px solid #b3b3b3;
+}
+
+ol.faq .question::after {
+  border-right: 2px solid #b3b3b3;
+}
+
+ol.faq .question::before {
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%);
+}
+
+ol.faq .question::after {
+  right: 14px;
+}
+
+ol.faq input:checked+label .question::after {
+  top: calc(50% - 18px);
+  right: 5px;
+  transform: translate(-50%) rotate(90deg);
+}
+
+ol.faq .answer {
+  display: none;
+  margin-top: 10px;
+  padding-right: 45px;
+  font-size: 15px;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+/* 荳ｭ蟄ｦ */
+
+ol.faq.middle-school label:hover {
+  background: #f5fbff;
+}
+
+ol.faq.middle-school li label::before {
+  color: #48a8d9;
+}
+
+/* 鬮俶�｡ */
+
+ol.faq.high-school label:hover {
+  background: #fff7f5;
+}
+
+ol.faq.high-school li label::before {
+  color: #ef6346;
+}
+
+/* Bottom band area��main荳矩Κ縺ｫ蜃ｺ縺ｦ縺上ｋ轣ｰ濶ｲ縺ｮ繝懊ち繝ｳ遲峨′蜈･繧句ｸｯ��
+   ------------------------ */
+.bottom-band-area {
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 0;
+  background: #f7f7f7;
+}
+
+/* 蠑ｷ隱ｿ襍､譁�ｭ�
+   ------------------------ */
+
+strong.base {
+  color: #ce1d1d;
+  font-weight: normal;
+}
+
+/* Layout
+   ============================================ */
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* flex-box蟾ｦ蟇�○2繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+.flex-box.left-2column::after {
+  content: "";
+  display: block;
+  width: 50%;
+}
+
+/* flex-box蟾ｦ蟇�○3繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+.flex-box.left-3column::after {
+  content: "";
+  display: block;
+  width: 30%;
+}
+
+/* flex-box蟾ｦ蟇�○4繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+.flex-box.left-4column::before,
+.flex-box.left-4column::after {
+  content: "";
+  display: block;
+  width: 25%;
+}
+
+.flex-box.left-4column::before {
+  order: 1;
+}
+
+.centering {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 蝓ｺ譛ｬ繝懊ち繝ｳ縺碁團繧雁粋縺｣縺溘→縺� */
+
+.c-btn.base~.c-btn.base {
+  margin-left: 20px;
+}
+
+/* 繧ｮ繝｣繝ｩ繝ｪ繝ｼ縺ｮ逕ｻ蜒城�鄂ｮ繝ｬ繧､繧｢繧ｦ繝� */
+
+.gallery.flex-box::after {
+  content: "";
+  display: block;
+  width: 31%;
+}
+
+.gallery .img-box.sm {
+  margin-top: 30px;
+}
+
+/* 繝壹�繧ｸ繝ｳ繧ｰ繝懊ち繝ｳ荳企Κ縺ｮ菴咏區 */
+
+.paging-area {
+  margin-top: 50px;
+}
+
+/* 繝壹�繧ｸ繝医ャ繝励�繧ｿ繝ｳ
+   ============================================ */
+
+.to-top {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  transition: 0.2s;
+  z-index: 3;
+}
+
+.to-top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4d4d4d;
+  transition: 0.2s;
+  opacity: 0.8;
+}
+
+.to-top a:hover {
+  opacity: 1;
+}
+
+.to-top a::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 17px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+/* 繝｡繧､繝ｳ繝薙ず繝･繧｢繝ｫ
+   ============================================ */
+
+.main-visual {
+  position: relative;
+}
+
+/* Slider
+   ------------------------ */
+
+#Slider {
+  position: relative;
+  width: 100%;
+}
+
+#Slider li {
+  position: relative;
+  width: 100%;
+  max-height: 600px;
+  height: calc(85vh - 90px);
+}
+
+#Slider li .catchcopy {
+  position: absolute;
+  width: 100%;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-family: serif;
+}
+
+/* Next/Previous Button */
+
+#Slider .arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#Slider .arrow::after {
+  content: "";
+  position: relative;
+  top: 7px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* 豕穂ｺｺ */
+
+#Slider.corporation .arrow {
+  top: 50%;
+}
+
+/* 荳ｭ蟄ｦ, 鬮俶�｡ */
+
+#Slider.middle-school .arrow,
+#Slider.high-school .arrow {
+  top: 45%;
+}
+
+/* Previous Button */
+
+#Slider .arrow.prev {
+  left: 4%;
+}
+
+#Slider .arrow.prev::after {
+  transform: rotate(135deg);
+}
+
+/* Next Button */
+
+#Slider .arrow.next {
+  right: 3%;
+}
+
+#Slider .arrow.next::after {
+  transform: rotate(-45deg);
+}
+
+/* 荳崎ｦ√↑繝代�繝�撼陦ｨ遉ｺ */
+
+#Slider .slick-dots {
+  display: none !important;
+}
+
+/* Topic News
+   ------------------------ */
+
+.main-visual .topic-news {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+}
+
+.main-visual .topic-news.flex-box {
+  justify-content: flex-start;
+}
+
+/* 豕穂ｺｺ */
+
+.main-visual .topic-news.corporation {
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* 荳ｭ蟄ｦ繝ｻ鬮俶�｡ */
+
+.main-visual .topic-news.middle-school,
+.main-visual .topic-news.high-school {
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* .main-visual .topic-news.middle-school,
+.main-visual .topic-news.high-school {
+  width: 250px;
+  bottom: 5%;
+  right: 10%;
+  left: auto;
+} */
+
+.main-visual .topic-news>section {
+  transition: 0.3s;
+}
+
+/* 豕穂ｺｺ */
+
+.main-visual .topic-news.corporation>section+section {
+  margin-left: 13px;
+}
+
+/* 荳ｭ蟄ｦ繝ｻ鬮俶�｡ */
+
+.main-visual .topic-news.middle-school>section+section,
+.main-visual .topic-news.high-school>section+section {
+  margin-left: 13px;
+}
+/* .main-visual .topic-news.middle-school>section+section,
+.main-visual .topic-news.high-school>section+section {
+  margin-top: 20px;
+} */
+
+.main-visual .topic-news>section:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-visual .news-card {
+  width: 240px;
+  padding: 3px;
+}
+
+.main-visual .news-card .news-content {
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.main-visual .news-card .news-content .title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-visual .news-card .news-content .description {
+  height: 60px;
+  margin-top: 5px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+/* 邱頑･諠��ｱ */
+
+.main-visual .news-card.emergency {
+  background: #d72513;
+  color: #fff;
+  overflow: hidden;
+  border-bottom: 3px solid #d72513;
+}
+
+.main-visual .news-card.emergency .division {
+  padding-left: 5px;
+}
+
+.main-visual .news-card.emergency .division::before {
+  content: url(../img/common/icon-emergency.png);
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+
+.main-visual .news-card.emergency .news-content {
+  width: 100%;
+  margin-top: 10px;
+  padding: 4px 19px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #f00;
+  transition: 0.2s;
+}
+
+.main-visual .news-card.emergency:hover .news-content {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* 騾壼ｸｸ縺ｮ縺顔衍繧峨○�育ｷ頑･諠��ｱ莉･螟厄ｼ� */
+
+.main-visual .news-card.normal {
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.2s;
+}
+
+.main-visual .news-card.normal:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.main-visual .news-card.normal .division {
+  position: relative;
+  top: 3px;
+  padding-left: 40px;
+}
+
+.main-visual .news-card.normal .division::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 7px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  z-index: 2;
+}
+
+.main-visual .news-card.normal .division::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 22px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  z-index: 1;
+}
+
+.main-visual .news-card.normal .news-content {
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 19px;
+}
+
+.main-visual .news-card.normal .news-content time {
+  color: #666;
+}
+
+/* 荳ｭ鬮伜�騾� */
+
+.main-visual .news-card.normal .division.corporation {
+  color: #626aa4;
+}
+
+.main-visual .news-card.normal .division.corporation::before {
+  background: #6169a3;
+}
+
+.main-visual .news-card.normal .division.corporation::after {
+  background: #8a90b8;
+}
+
+/* 蟶ｸ邱丞ｭｦ髯｢荳ｭ蟄ｦ譬｡ */
+
+.main-visual .news-card.normal .division.middle-school {
+  color: #48a8d9;
+}
+
+.main-visual .news-card.normal .division.middle-school::before {
+  background: #47a7d9;
+}
+
+.main-visual .news-card.normal .division.middle-school::after {
+  background: #78bcde;
+}
+
+/* 蟶ｸ邱丞ｭｦ髯｢鬮倡ｭ牙ｭｦ譬｡ */
+
+.main-visual .news-card.normal .division.high-school {
+  color: #ef6346;
+}
+
+.main-visual .news-card.normal .division.high-school::before {
+  background: #ef6345;
+}
+
+.main-visual .news-card.normal .division.high-school::after {
+  background: #f08e79;
+}
+
+/* 繝��繝悶Ν繝ｬ繧､繧｢繧ｦ繝�
+   ============================================ */
+
+/* 縲��､ｧ蟄ｦ蜷域�ｼ螳溽ｸｾ�医Ξ繧ｹ繝昴Φ繧ｷ繝悶�讓ｪ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ繧�▽��
+   ----------------------------------------- */
+
+table.results {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.results tr {
+  border-bottom: 1px solid #dedede;
+}
+
+table.results tr>* {
+  padding: 20px;
+  text-align: center;
+}
+
+table.results td:first-child {
+  background: #f7f7f7;
+}
+
+/* 豕穂ｺｺ */
+
+table.results.corporation th {
+  background: #cbd0f0;
+}
+
+table.results.corporation th:first-child {
+  background: #a9aed5;
+}
+
+/* 鬮俶�｡ */
+
+table.results.high-school th {
+  background: #ffdbd4;
+}
+
+table.results.high-school th:first-child {
+  background: #fdc3b7;
+}
+
+/* 豁ｴ蜿ｲ縺ｪ縺ｩ縺ｮ譌･莉倥ｒ莨ｴ縺�ユ繝ｼ繝悶Ν
+   ----------------------------------------- */
+
+ul.history {
+  margin-top: 20px;
+}
+
+ul.history li:first-child {
+  border-top: 1px solid #dedede;
+}
+
+ul.history li {
+  padding: 15px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+ul.history li>* {
+  display: inline-block;
+}
+
+ul.history time {
+  /* width縺ｯ蜈･繧九さ繝ｳ繝�Φ繝�↓繧医▲縺ｦ螟峨ｏ繧九�縺ｧ蜷��繝ｼ繧ｸ縺ｧ螳夂ｾｩ縺励※縺上□縺輔＞ */
+  font-weight: bold;
+  vertical-align: top;
+}
+
+ul.history .description {
+  max-width: 845px;
+}
+
+/* 繧､繝ｳ繝輔か繝｡繝ｼ繧ｷ繝ｧ繝ｳ
+   ============================================ */
+
+section.information-area {
+  padding: 30px 0 60px;
+  background: #f2f2f2;
+}
+
+/* 蜃｡萓�
+   ------------------------ */
+
+.information-area .legend-area {
+  text-align: right;
+}
+
+.information-area .legend-area .legend+.legend {
+  margin-left: 10px;
+}
+
+.information-area .legend-area .legend::before {
+  content: "";
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/* 荳ｭ鬮伜�騾� */
+
+.information-area .legend-area .legend.corporation {
+  color: #7179ad;
+}
+
+.information-area .legend-area .legend.corporation::before {
+  background: #7179ad;
+}
+
+/* 荳ｭ蟄ｦ譬｡ */
+
+.information-area .legend-area .legend.middle-school {
+  color: #48a8d9;
+}
+
+.information-area .legend-area .legend.middle-school::before {
+  background: #48a8d9;
+}
+
+/* 鬮倡ｭ牙ｭｦ譬｡ */
+
+.information-area .legend-area .legend.high-school {
+  color: #ef6346;
+}
+
+.information-area .legend-area .legend.high-school::before {
+  background: #ef6346;
+}
+
+/* 縺顔衍繧峨○蛻�ｊ譖ｿ縺医ち繝悶�繧ｿ繝ｳ
+   ------------------------ */
+
+.information-area input[type="radio"] {
+  display: none;
+}
+
+.information-area .tab-btn-area {
+  width: 100%;
+  max-width: 100vw;
+  margin-top: 20px;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  overflow-x: scroll;
+  /* IE, Edge 縺ｮ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繝舌� */
+  -ms-overflow-style: none;
+  /* Firefox 縺ｮ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繝舌� */
+  scrollbar-width: none;
+}
+
+.information-area .tab-btn-area::-webkit-scrollbar {
+  /* Chrome, Safari 縺ｮ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繝舌� */
+  display: none;
+}
+
+.information-area .tab-btn-area label~label {
+  margin-left: 14px;
+}
+
+/* 縺顔衍繧峨○險倅ｺ�
+   ------------------------ */
+
+.information-area .article-area {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.information-area .article-area li {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  transition: 0.2s;
+}
+
+.information-area .article-area li+li {
+  border-top: 1px solid #e8e8e8;
+}
+
+.information-area .article-area li::after {
+  content: "";
+  position: absolute;
+  top: 43%;
+  right: 2%;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #b5b5b5;
+  border-bottom: 1px solid #b5b5b5;
+  transform: rotate(-45deg);
+}
+
+.information-area .article-area li:hover {
+  z-index: 1;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.information-area .article-area li>a {
+  display: flex;
+  align-items: center;
+  padding: 15px 45px 15px 30px;
+}
+
+.information-area .article-area li>a>*+* {
+  margin-left: 20px;
+}
+
+.information-area .article-area li>a time {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.information-area .article-area .tag-area {
+  padding: 0 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.information-area .article-area .tag-area>span+span {
+  margin-left: 10px;
+}
+
+.information-area .article-area li a p {
+  max-width: 610px;
+  transition: 0.2s;
+}
+
+/* 譁ｰ逹險倅ｺ九�繝ｼ繧ｯ */
+.information-area .article-area li a p.is-new::after {
+  content: "New!";
+  display: inline-block;
+  margin-left: 5px;
+  color: #f92929;
+  font-size: 0.85em;
+}
+
+/* 譛譁ｰ險倅ｺ九′縺ｪ縺九▲縺溷�ｴ蜷医�縺顔衍繧峨○ */
+
+.information-area .article-area+.notice {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* 繝医ヴ繝�け繧ｹ
+   ============================================ */
+
+section.topics {
+  padding: 30px 0 60px;
+}
+
+.topics .topic-menu-area {
+  margin-top: 30px;
+}
+
+.topics .topic-menu-area.flex-box {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.topics .topic-menu {
+  width: 235px;
+}
+
+.topics .topic-menu .img-box {
+  overflow: hidden;
+}
+
+.topics .topic-menu .img-box img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.topics .topic-menu a:hover .img-box img {
+  transform: scale(1.1);
+}
+
+.topics .topic-menu+.topic-menu {
+  margin-left: 20px;
+}
+
+.topics .topic-menu .description-area {
+  margin-top: 10px;
+}
+
+.topics .topic-menu .description {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+/* 荳ｭ繝壹�繧ｸ
+   ============================================ */
+
+/* 繝倥ャ繝繝ｼ荳九リ繝薙ご繝ｼ繧ｷ繝ｧ繝ｳ
+   ------------------------ */
+
+main section.sub-menu-area {
+  width: 100%;
+  padding: 10px 0;
+}
+
+main section.sub-menu-area {
+  width: 100%;
+  padding: 10px 0;
+}
+
+main section.sub-menu-area .sub-menu li {
+  display: inline-block;
+}
+
+main section.sub-menu-area .sub-menu li+li {
+  margin-left: 40px;
+}
+
+/* 豕穂ｺｺ */
+
+main section.sub-menu-area.corporation li a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+main section.sub-menu-area.corporation {
+  color: #fff;
+  background-color: #626aa4;
+}
+
+main section.sub-menu-area.corporation .sub-menu li a.is-current {
+  font-weight: bold;
+}
+
+/* 荳ｭ繝壹�繧ｸ蜈ｱ騾壹さ繝ｳ繝�Φ繝�そ繧ｯ繧ｷ繝ｧ繝ｳ
+   ------------------------ */
+
+section.child-contents-area {
+  margin-top: 30px;
+  padding-bottom: 80px;
+}
+
+section.child-contents-area p a {
+  border-bottom: 1px solid #333;
+  transition: opacity 0.2s;
+}
+
+section.child-contents-area p+p {
+  margin-top: 15px;
+}
+
+section.child-contents-area p a:hover {
+  border-bottom: none;
+  opacity: 0.6;
+}
+
+/* 蜷�そ繧ｯ繧ｷ繝ｧ繝ｳ縺ｫ縺翫￠繧倶ｽ咏區 */
+
+h2.child+p {
+  margin-top: 30px;
+}
+
+h3.child+p {
+  margin-top: 25px;
+}
+
+h4.child+p {
+  margin-top: 20px;
+}
+
+h5.child+p {
+  margin-top: 10px;
+}
+
+/* �井ｸｭ鬮假ｼ峨さ繝ｼ繧ｹ隧ｳ邏ｰ繝壹�繧ｸ
+   ============================================ */
+
+.head-box {
+  position: absolute;
+  bottom: -10%;
+  width: 240px;
+  height: 240px;
+  color: #fff;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.head-box h1.course {
+  font-size: 35px;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h1.course .sub-title {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.head-box.flex-box {
+  justify-content: center;
+}
+
+/* 荳ｭ蟄ｦ */
+
+/* 蛹ｻ蟄ｦ謗｢遨ｶ繝輔ぅ繝ｼ繝ｫ繝� */
+.head-box.medical-science {
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+/* 遘大ｭｦ謗｢遨ｶ繝輔ぅ繝ｼ繝ｫ繝� */
+.head-box.science {
+  background: linear-gradient(90deg, #1dad90 1%, #5bdba3 100%);
+}
+
+/* 莠ｺ譁�爾遨ｶ繝輔ぅ繝ｼ繝ｫ繝� */
+.head-box.humanities {
+  background: linear-gradient(90deg, #f06e5c 0%, #f4a762 100%);
+}
+
+/* 鬮俶�｡ */
+
+/* 迚ｹ騾ｲ驕ｸ謚懊さ繝ｼ繧ｹEX繧ｯ繝ｩ繧ｹ */
+.head-box.advanced {
+  background: linear-gradient(90deg, #1dad90 1%, #5bdba3 100%);
+}
+
+/* 迚ｹ騾ｲ驕ｸ謚懊さ繝ｼ繧ｹ */
+.head-box.special-advanced {
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+/* 騾ｲ蟄ｦ驕ｸ謚懊さ繝ｼ繧ｹ繝励Ο繧ｰ繝ｬ繧ｹ */
+.head-box.progress {
+  background: linear-gradient(90deg, #f06e5c 0%, #f4a762 100%);
+}
+
+/* 騾ｲ蟄ｦ驕ｸ謚懊さ繝ｼ繧ｹ繝輔Ο繝ｳ繝�ぅ繧｢ */
+.head-box.frontier {
+  background: linear-gradient(90deg, #e8b51b 0%, #ebcd3a 100%);
+}
+
+/* 荳ｭ鬮倅ｸ雋ｫ */
+.head-box.consistent {
+  background: linear-gradient(90deg, #5c58ce 0%, #66a3d9 100%);
+}
+
+/* �井ｸｭ鬮假ｼ牙ｭｦ譬｡陦御ｺ九�繝ｼ繧ｸ
+   ============================================ */
+
+/* 逕ｻ蜒上＾verlay繧ｭ繝｣繝励す繝ｧ繝ｳ
+   ------------------------ */
+
+.recent-events {
+  margin-top: 20px;
+}
+
+.recent-events .event {
+  position: relative;
+}
+
+.event .caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.caption time {
+  font-weight: bold;
+}
+
+/* 荳ｭ蟄ｦ */
+
+.caption.middle-school {
+  background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+}
+
+/* 鬮俶�｡ */
+
+.caption.high-school {
+  background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+}
+
+/* 蟷ｴ髢楢｡御ｺ九ユ繝ｼ繝悶Ν
+   ------------------------ */
+
+.annual-events {
+  margin-top: 30px;
+}
+
+.annual-events .month-detail {
+  width: 30%;
+  padding: 20px 0 40px;
+  border-top: 1px solid #000;
+}
+
+.annual-events>.flex-box {
+  align-items: flex-start;
+}
+
+.annual-events .month-detail .month-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.annual-events .month-detail .month-title span {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.annual-events .month-detail .event-content {
+  margin-top: 10px;
+}
+
+.annual-events .month-detail .event-content li {
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.annual-events .month-detail .event-content li::before {
+  content: "繝ｻ";
+}
+
+.annual-events .month-detail .event-content li+li {
+  margin-top: 5px;
+}
+
+/* 譏･ */
+
+.annual-events .month-detail.spring {
+  border-color: #f296a9;
+}
+
+.annual-events .month-detail.spring .month-title {
+  color: #f296a9;
+}
+
+/* 螟� */
+
+.annual-events .month-detail.summer {
+  border-color: #85ba41;
+}
+
+.annual-events .month-detail.summer .month-title {
+  color: #85ba41;
+}
+
+/* 遘� */
+
+.annual-events .month-detail.autumn {
+  border-color: #b98e40;
+}
+
+.annual-events .month-detail.autumn .month-title {
+  color: #b98e40;
+}
+
+/* 蜀ｬ */
+
+.annual-events .month-detail.winter {
+  border-color: #4daccc;
+}
+
+.annual-events .month-detail.winter .month-title {
+  color: #4daccc;
+}
+
+/* ============================================
+   繧ｿ繝悶Ξ繝�ヨ
+   ============================================ */
+
+@media screen and (max-width: 1000px) {
+
+  /* Responsive
+     ============================================ */
+  .pc {
+    display: none !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+
+  .sp.flex-box {
+    display: flex !important;
+  }
+
+  main {
+    padding-top: 0!important;
+  }
+  main {
+    margin-top: 70px;
+  }
+
+  /* Component
+     ============================================ */
+  h1.top {
+    font-size: 28px;
+  }
+
+  h1.child {
+    font-size: 38px;
+  }
+
+  h2.child {
+    padding-left: 18px;
+    font-size: 23px;
+  }
+
+  h2.child::before {
+    top: 4px;
+    height: 23px;
+  }
+
+  h3.child {
+    font-size: 20px;
+  }
+
+  .c-btn.base {
+    padding: 13px 35px;
+  }
+
+  /* 繝壹�繧ｸ騾√ｊ
+   ------------------------ */
+  .paging-btn.prev {
+    margin-right: 10px;
+  }
+
+  .paging-btn.prev::before {
+    top: 23px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .paging-btn.next {
+    margin-left: 10px;
+  }
+
+  .paging-btn.next::after {
+    top: 23px;
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Layout
+     ============================================ */
+  .inner {
+    padding: 0 30px;
+  }
+
+  .c-btn.base~.c-btn.base {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* 繧ｮ繝｣繝ｩ繝ｪ繝ｼ縺ｮ逕ｻ蜒城�鄂ｮ */
+  .gallery.flex-box {
+    justify-content: space-between;
+  }
+
+  .gallery .img-box.sm:not(:nth-of-type(3n + 1)) {
+    margin-left: 0;
+  }
+
+  .gallery .img-box.sm:nth-of-type(2n) {
+    margin-left: 20px;
+  }
+
+  /* flex-box蟾ｦ蟇�○2繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+  .flex-box.left-2column::before {
+    width: 48%;
+  }
+
+  /* flex-box蟾ｦ蟇�○3繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+  .flex-box.left-3column::before {
+    width: 48%;
+  }
+
+  /* flex-box蟾ｦ蟇�○4繧ｫ繝ｩ繝�繝ｬ繧､繧｢繧ｦ繝� */
+  .flex-box.left-4column::before,
+  .flex-box.left-4column::after {
+    width: 48%;
+  }
+
+  /* 繝��繝悶Ν繝ｬ繧､繧｢繧ｦ繝�
+     ============================================ */
+
+  /* 豁ｴ蜿ｲ縺ｪ縺ｩ縺ｮ譌･莉倥ｒ莨ｴ縺�ユ繝ｼ繝悶Ν
+     ----------------------------------------- */
+  .history li>* {
+    display: block;
+  }
+
+  .history li>p {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* 蟄ｦ譬｡繝ｪ繝ｳ繧ｯ
+     ============================================ */
+  section.sp.school-link {
+    flex-wrap: nowrap;
+  }
+
+  section.sp.school-link>.school {
+    width: 100%;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  section.sp.school-link .school-name>* {
+    display: inline-block;
+  }
+
+  section.sp.school-link .school-name .title {
+    margin-left: 5px;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  section.sp.school-link .school-name .title span {
+    font-size: 18px;
+  }
+
+  /* 荳ｭ蟄ｦ譬｡ */
+  section.sp.school-link>.school.middle-school {
+    background: linear-gradient(90deg, #3595cd 0%, #3fcdc7 100%);
+  }
+
+  /* 鬮倡ｭ牙ｭｦ譬｡ */
+  section.sp.school-link>.school.high-school {
+    background: linear-gradient(90deg, #d5372b 0%, #f56731 100%);
+  }
+
+  /* 荳ｭ蟄ｦ縺ｮ縺ｺ繝ｼ繧ｸ縺ｯ繝｡繧､繝ｳ繧ｳ繝ｳ繝�Φ繝УOP縺ｫ縺ゅｋ鬮俶�｡縺ｮ繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ髱櫁｡ｨ遉ｺ
+     ------------------------ */
+  main.middle-school .sp.school-link .school.high-school {
+    display: none;
+  }
+
+  /* 鬮俶�｡縺ｮ縺ｺ繝ｼ繧ｸ繧ゆｸｭ蟄ｦ蜷梧ｧ倥リ繝薙ご繝ｼ繧ｷ繝ｧ繝ｳ髱櫁｡ｨ遉ｺ
+     ------------------------ */
+  main.high-school .sp.school-link .school.middle-school {
+    display: none;
+  }
+
+  /* 繝｡繧､繝ｳ繝薙ず繝･繧｢繝ｫ
+     ============================================ */
+
+  /* Slider
+     ------------------------ */
+  #Slider .slick-arrow {
+    display: none !important;
+  }
+
+  #Slider li {
+    width: 100%;
+    max-height: 700px;
+    height: calc(50vh - 90px);
+  }
+
+  #Slider li .catchcopy {
+    font-size: 30px;
+  }
+
+  /* Topic News
+     ------------------------ */
+  .main-visual .topic-news[class] {
+    position: static;
+    transform: translate(0);
+    margin-top: 30px;
+  }
+
+  .main-visual .topic-news>section {
+    width: 100%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .main-visual .topic-news[class]>section+section {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .main-visual .news-card {
+    height: auto;
+  }
+
+  /* 荳ｭ蟄ｦ繝ｻ鬮俶�｡ */
+  .main-visual .topic-news.middle-school,
+  .main-visual .topic-news.high-school {
+    width: 100%;
+  }
+
+  /* 繧､繝ｳ繝輔か繝｡繝ｼ繧ｷ繝ｧ繝ｳ
+     ============================================ */
+  /* 蜃｡萓�
+     ------------------------ */
+  .information-area .legend-area {
+    display: none;
+  }
+
+  /* 縺顔衍繧峨○險倅ｺ�
+     ------------------------ */
+  .information-area .article-area li>a time {
+    padding: 0;
+  }
+
+  .information-area .article-area li>a {
+    flex-wrap: wrap;
+  }
+
+  .information-area .article-area li a p {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .information-area .article-area li>a>*+* {
+    margin-left: 10px;
+  }
+
+  /* 繝医ヴ繝�け繧ｹ
+     ============================================ */
+  .topics .topic-menu {
+    width: 100%;
+  }
+
+  .topics .topic-menu+.topic-menu {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .topics .topic-menu a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .topics .topic-menu .description-area {
+    max-width: 50%;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  /* 荳ｭ繝壹�繧ｸ
+     ============================================ */
+  /* 繝倥ャ繝繝ｼ荳九リ繝薙ご繝ｼ繧ｷ繝ｧ繝ｳ
+     ------------------------ */
+  main section.sub-menu-area {
+    display: none;
+  }
+
+  /* topic content box
+     ------------------------ */
+  .topic-content-box {
+    padding: 20px 30px;
+    background: #f7f7f7;
+  }
+
+  /* 逕ｻ蜒州OX
+     ------------------------ */
+  .img-box.md {
+    max-width: 48%;
+    width: 100%;
+  }
+
+  .img-box.md img {
+    width: 100%;
+  }
+
+  .img-box.sm {
+    max-width: 48%;
+    width: 100%;
+  }
+
+  .img-box.sm img {
+    width: 100%;
+  }
+
+  /* �井ｸｭ鬮假ｼ峨さ繝ｼ繧ｹ隧ｳ邏ｰ繝壹�繧ｸ
+   ============================================ */
+  .head-box {
+    max-width: 240px;
+    min-width: 200px;
+    width: 25vw;
+    max-height: 240px;
+    min-height: 200px;
+    height: 25vw;
+  }
+
+  .head-box h1.course {
+    font-size: 30px;
+  }
+
+  /* �井ｸｭ鬮假ｼ牙ｭｦ譬｡陦御ｺ九�繝ｼ繧ｸ
+   ============================================ */
+  /* 逕ｻ蜒上＾verlay繧ｭ繝｣繝励す繝ｧ繝ｳ
+     ------------------------ */
+  .recent-events .event {
+    width: 48%;
+  }
+
+  .recent-events .event:nth-of-type(n + 3) {
+    margin-top: 3vw;
+  }
+
+  .recent-events .event img {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   繧ｹ繝槭�繝医ヵ繧ｩ繝ｳ
+   ============================================ */
+
+@media screen and (max-width: 560px) {
+
+  /* Responsive
+     ============================================ */
+  .pc-tb {
+    display: none !important;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  /* Component
+     ============================================ */
+  h1.top {
+    font-size: 24px;
+  }
+
+  h2.top {
+    font-size: 18px;
+  }
+
+  .c-btn.base {
+    font-size: 15px;
+  }
+
+  .c-btn.info-tab {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  h1.child {
+    font-size: 32px;
+  }
+
+  h2.child {
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+  h2.child::before {
+    top: 4px;
+    height: 20px;
+  }
+
+  h2.child time {
+    margin-top: 5px;
+  }
+
+  h3.child {
+    font-size: 18px;
+  }
+
+  /* 繝壹�繧ｸ騾√ｊ
+     ------------------------ */
+  .paging-btn:not(.prev):not(.next):not(.back) {
+    display: none;
+  }
+
+  /* Bottom band area��main荳矩Κ縺ｫ蜃ｺ縺ｦ縺上ｋ轣ｰ濶ｲ縺ｮ繝懊ち繝ｳ遲峨′蜈･繧句ｸｯ��
+   ------------------------ */
+  .bottom-band-area {
+    margin-top: 20px;
+  }
+
+  .bottom-band-area .flex-box {
+    justify-content: center;
+  }
+
+  /* Layout
+     ============================================ */
+  .inner {
+    padding: 0 15px;
+  }
+
+  .bread-crumb-area.inner {
+    padding: 5px 15px;
+  }
+
+  .gallery .img-box.sm:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .flex-box.left-3column::after {
+    width: 100%;
+  }
+
+  /* 縺ｱ繧薙￥縺壹Μ繧ｹ繝�
+     ============================================ */
+  .bread-crumb li+li {
+    margin-left: 20px;
+  }
+
+  .bread-crumb li+li::before {
+    left: -17px;
+  }
+
+  /* Slider
+     ============================================ */
+  #Slider li .catchcopy {
+    font-size: 24px;
+  }
+
+  /* 蟄ｦ譬｡繝ｪ繝ｳ繧ｯ
+     ============================================ */
+  section.sp.school-link .school-name .title span {
+    display: block;
+  }
+
+  /* topic content box
+     ------------------------ */
+  .topic-content-box {
+    padding: 20px;
+    background: #f7f7f7;
+  }
+
+  /* 逕ｻ蜒州OX
+     ------------------------ */
+  .img-box.md {
+    max-width: 100%;
+  }
+
+  .img-box.sm {
+    max-width: 100%;
+  }
+
+  /* 繝��繝悶Ν繝ｬ繧､繧｢繧ｦ繝�
+     ============================================ */
+  /* 縲��､ｧ蟄ｦ蜷域�ｼ螳溽ｸｾ�医Ξ繧ｹ繝昴Φ繧ｷ繝悶�讓ｪ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ繧�▽��
+       ----------------------------------------- */
+  table.results tr>* {
+    padding: 10px;
+  }
+
+  /* 繧､繝ｳ繝輔か繝｡繝ｼ繧ｷ繝ｧ繝ｳ
+     ============================================ */
+  /* 縺顔衍繧峨○險倅ｺ�
+     ------------------------ */
+  .information-area .article-area li::after {
+    right: 7%;
+  }
+
+  /* �井ｸｭ鬮假ｼ峨さ繝ｼ繧ｹ隧ｳ邏ｰ繝壹�繧ｸ
+      ============================================ */
+  .head-box {
+    bottom: -80px;
+    left: 50%;
+    max-width: 87%;
+    width: 100%;
+    min-height: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+  }
+
+  .head-box h1.course {
+    font-size: 25px;
+  }
+
+  h1.course .sub-title {
+    margin-top: 5px;
+  }
+
+  /* �井ｸｭ鬮假ｼ牙ｭｦ譬｡陦御ｺ九�繝ｼ繧ｸ
+     ============================================ */
+  /* 逕ｻ蜒上＾verlay繧ｭ繝｣繝励す繝ｧ繝ｳ
+     ------------------------ */
+  .recent-events .event,
+  .recent-events .event img {
+    width: 100%;
+  }
+
+  .recent-events .event:nth-of-type(n + 2) {
+    margin-top: 20px;
+  }
+
+  /* 蟷ｴ髢楢｡御ｺ九ユ繝ｼ繝悶Ν
+     ------------------------ */
+  .annual-events .month-detail {
+    width: 100%;
+  }
+}
